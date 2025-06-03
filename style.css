@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fef6f9;
+  text-align: center;
+  color: #444;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #d6336c;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.photo-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.photo-card:hover {
+  transform: scale(1.02);
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.audio-control {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#audio-control button,
+#music-btn {
+  background-color: #ff4c75;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#music-btn:hover {
+  background-color: #e43e65;
+  transform: scale(1.05);
+}
+
+
+.btn-cartas-fofo {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.btn-cartas-fofo a {
+  display: inline-block;
+  background: linear-gradient(145deg, #ff9aaf, #ffd1dc);
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 3px solid #fff0f5; /* 💖 borda rosinha suave */
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cartas-fofo a:hover {
+  background: linear-gradient(145deg, #ff7a94, #ffb6c1);
+  box-shadow: 0 6px 18px rgba(255, 105, 135, 0.4);
+  transform: scale(1.03);
+  border-color: #ffd1dc; /* muda a borda no hover */
+}
+
+.btn-cartas-fofo .heart {
+  animation: pulse 1.2s infinite;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+.cartas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.carta {
+  width: 260px;
+  height: 160px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.carta > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(255, 105, 135, 0.3);
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 20px;
+  box-sizing: border-box;
+  user-select: none;
+  transition: transform 0.6s;
+  color: #fff;
+  text-align: center;
+}
+
+.frente {
+  background: linear-gradient(135deg, #ff9aaf, #ffd1dc);
+}
+
+.verso {
+  background: linear-gradient(135deg, #ff4c75, #ff8ba1);
+  transform: rotateY(180deg);
+}
+
+/* quando a carta está virada, o container recebe essa classe */
+.carta.virada .frente {
+  transform: rotateY(180deg);
+}
+
+.carta.virada .verso {
+  transform: rotateY(0deg);
+}
+
+
+#playlist-container {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #fff0f5;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(255, 105, 135, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+#playlist-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#playlist-container li {
+  margin-bottom: 25px;
+  font-size: 18px;
+  color: #d6336c;
+}
+
+audio {
+  margin-top: 8px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 105, 135, 0.2);
+}
+

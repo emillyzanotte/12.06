@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jogo da Memória 💖</title>
+  <link rel="stylesheet" href="memoria.css" />
+</head>
+<body>
+  <h1>Jogo da Memória 💖</h1>
+  <p>Encontre os pares iguais e ganhe o jogo!</p>
+
+  <div class="tabuleiro">
+    <!-- Par 1 -->
+    <div class="carta" data-id="1">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/751b9b1b-9484-4439-89f9-5166e2cce842.jfif" alt="Coração 1" /></div>
+      </div>
+    </div>
+    <div class="carta" data-id="1">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/751b9b1b-9484-4439-89f9-5166e2cce842.jfif" alt="Coração 1" /></div>
+      </div>
+    </div>
+
+    <!-- Par 2 -->
+    <div class="carta" data-id="2">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/5aac83d1-13db-48ab-aa82-0676a1c1c90d.jfif" alt="Coração 2" /></div>
+      </div>
+    </div>
+    <div class="carta" data-id="2">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/5aac83d1-13db-48ab-aa82-0676a1c1c90d.jfif" alt="Coração 2" /></div>
+      </div>
+    </div>
+
+    <!-- Par 3 -->
+    <div class="carta" data-id="3">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/4ecc990c-fec5-4966-93d6-953effaa8752.jfif" alt="Coração 3" /></div>
+      </div>
+    </div>
+    <div class="carta" data-id="3">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/4ecc990c-fec5-4966-93d6-953effaa8752.jfif" alt="Coração 3" /></div>
+      </div>
+    </div>
+
+    <!-- Par 4 -->
+    <div class="carta" data-id="4">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/ad9e0eab-5ea3-4913-8a2a-65834f3bec33.jfif" alt="Coração 4" /></div>
+      </div>
+    </div>
+    <div class="carta" data-id="4">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/ad9e0eab-5ea3-4913-8a2a-65834f3bec33.jfif" alt="Coração 4" /></div>
+      </div>
+    </div>
+
+    <!-- Par 5 -->
+    <div class="carta" data-id="5">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/7f130c51-ee9e-4696-a64f-2e6df1572e84.jfif" alt="Coração 5" /></div>
+      </div>
+    </div>
+    <div class="carta" data-id="5">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/7f130c51-ee9e-4696-a64f-2e6df1572e84.jfif" alt="Coração 5" /></div>
+      </div>
+    </div>
+
+    <!-- Par 6 -->
+    <div class="carta" data-id="6">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/0d164550-6afb-4f18-bbda-49d5816aa60d.jfif" alt="Coração 6" /></div>
+      </div>
+    </div>
+    <div class="carta" data-id="6">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/0d164550-6afb-4f18-bbda-49d5816aa60d.jfif" alt="Coração 6" /></div>
+      </div>
+    </div>
+
+    <!-- Par 7 -->
+    <div class="carta" data-id="7">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/614b424e-bfdf-4f3d-b4ac-053a1c63b0cc.jfif" alt="Coração 7" /></div>
+      </div>
+    </div>
+    <div class="carta" data-id="7">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/614b424e-bfdf-4f3d-b4ac-053a1c63b0cc.jfif" alt="Coração 7" /></div>
+      </div>
+    </div>
+
+    <!-- Par 8 -->
+    <div class="carta" data-id="8">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/493a0a39-718f-4da2-a0a7-73e24e8b8af4.jfif" alt="Coração 8" /></div>
+      </div>
+    </div>
+    <div class="carta" data-id="8">
+      <div class="carta-inner">
+        <div class="carta-front">❓</div>
+        <div class="carta-back"><img src="assets/493a0a39-718f-4da2-a0a7-73e24e8b8af4.jfif" alt="Coração 8" /></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="explosao-baloes"></div>
+
+  <div class="btn-voltar">
+    <a href="index.html">← Voltar ao Início ❤</a>
+  </div>
+
+  <script src="memoria.js"></script>
+</body>
+</html>

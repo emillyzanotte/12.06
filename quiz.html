@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Quiz: Apenas um entreterimento 🤔💕</h1>
+  <p>Responda e descubra! Cada resposta certa é um ponto de amor ❤️</p>
+
+  <div id="quiz-container">
+
+    <div class="quiz-pergunta" id="pergunta1">
+      <h3>1. Nossa data?</h3>
+      <label><input type="radio" name="q1" value="30.08" /> 30.08</label><br />
+      <label><input type="radio" name="q1" value="31.09" /> 31.09</label><br />
+      <label><input type="radio" name="q1" value="31.08" /> 31.08</label>
+    </div>
+
+    <div class="quiz-pergunta" id="pergunta2">
+      <h3>2. O que MAIS me irrita quando você faz?</h3>
+      <label><input type="radio" name="q2" value="vc com seu orgulho" /> Vc com seu orgulho</label><br />
+      <label><input type="radio" name="q2" value="jogar e não me responder" /> Jogar e não me responder</label><br />
+      <label><input type="radio" name="q2" value="se atrasar quando marco horário" /> Se atrasar quando marco horário</label>
+    </div>
+
+    <div class="quiz-pergunta" id="pergunta3">
+      <h3>3. O que mais assistimos?</h3>
+      <label><input type="radio" name="q3" value="ação" /> Ação</label><br />
+      <label><input type="radio" name="q3" value="comédia" /> Comédia</label><br />
+      <label><input type="radio" name="q3" value="terror" /> Terror</label>
+    </div>
+
+    <button id="btn-submit-quiz">Enviar respostas</button>
+  </div>
+
+  <div id="quiz-resultado" style="display:none; margin-top: 30px; font-size: 20px;"></div>
+
+  <div class="btn-cartas-fofo">
+    <a href="playlist.html">
+      🎧 Nossa Playlist <span class="heart">❤</span>
+    </a>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
