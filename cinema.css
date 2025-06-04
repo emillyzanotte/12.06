@@ -1,0 +1,183 @@
+/* Animação de entrada */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #444;
+    text-align: center;
+    overflow-x: hidden;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Corações caindo */
+.heart {
+    position: fixed;
+    top: -50px;
+    color: #ff4d88;
+    font-size: 20px;
+    animation: fall linear infinite;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Conteúdo */
+.container {
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff4081;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(255, 64, 129, 0.2);
+    max-width: 320px;
+}
+
+.video-card h2 {
+    color: #ff4081;
+    margin-bottom: 10px;
+}
+
+video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Botões */
+.surpresa-btn {
+    margin-top: 30px;
+    padding: 10px 25px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.surpresa-btn:hover {
+    background-color: #e73370;
+}
+
+.botao-link {
+    display: inline-block;
+    background-color: #ff4081;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.1em;
+    margin: 20px 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(255, 64, 129, 0.3);
+}
+
+.botao-link:hover {
+    background-color: #e73370;
+    transform: scale(1.05);
+}
+
+.botao-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#mensagem-surpresa {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #d50060;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---------- CORTINA REALISTA COM TEXTURA DE TECIDO ---------- */
+.cortina {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #8B0000;
+    background-image: 
+        repeating-linear-gradient(
+            90deg,
+            rgba(139, 0, 0, 1) 0px,
+            rgba(139, 0, 0, 1) 5px,
+            rgba(120, 0, 0, 1) 5px,
+            rgba(120, 0, 0, 1) 10px
+        ),
+        radial-gradient(circle at 50% 50%, rgba(255, 60, 60, 0.2) 0%, rgba(0, 0, 0, 0.4) 80%);
+    background-size: cover;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    transition: transform 2.5s ease;
+}
+
+.cortina.esquerda {
+    left: 0;
+    border-right: 4px solid #4d0000;
+}
+
+.cortina.direita {
+    right: 0;
+    border-left: 4px solid #4d0000;
+}
+
+/* ---------- Animação quando abre ---------- */
+body.cortina-aberta .cortina.esquerda {
+    transform: translateX(-100%);
+}
+
+body.cortina-aberta .cortina.direita {
+    transform: translateX(100%);
+}
+
+body.cortina-aberta .tela-preta {
+    opacity: 0;
+    pointer-events: none;
+}
