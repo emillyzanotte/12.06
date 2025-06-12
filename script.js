@@ -29,3 +29,8 @@ function toggleCarta(elemento) {
   elemento.classList.add('virada');
 }
 
+document.getElementById('enter-btn').addEventListener('click', function() {
+  document.getElementById('intro').style.display = 'none';
+});
+
+
